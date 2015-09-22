@@ -34,5 +34,53 @@ namespace WallpaperChanger.Properties {
                 this["wallpaperStyle"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool rotate {
+            get {
+                return ((bool)(this["rotate"]));
+            }
+            set {
+                this["rotate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("20")]
+        public int rotateTime {
+            get {
+                return ((int)(this["rotateTime"]));
+            }
+            set {
+                this["rotateTime"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Minutes")]
+        public string rotateUnit {
+            get {
+                return ((string)(this["rotateUnit"]));
+            }
+            set {
+                this["rotateUnit"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool minimized {
+            get {
+                return ((bool)(this["minimized"]));
+            }
+            set {
+                this["minimized"] = value;
+            }
+        }
     }
 }

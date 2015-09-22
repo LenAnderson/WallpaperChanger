@@ -5,5 +5,17 @@
     <Setting Name="wallpaperStyle" Type="System.String" Scope="User">
       <Value Profile="(Default)">Fill</Value>
     </Setting>
+    <Setting Name="rotate" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="rotateTime" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="rotateUnit" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Minutes</Value>
+    </Setting>
+    <Setting Name="minimized" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

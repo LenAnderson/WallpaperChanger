@@ -38,7 +38,15 @@
             this.btnRescan = new System.Windows.Forms.Button();
             this.grpRescan = new System.Windows.Forms.GroupBox();
             this.lblRescan = new System.Windows.Forms.Label();
+            this.chkRotate = new System.Windows.Forms.CheckBox();
+            this.lblRotate = new System.Windows.Forms.Label();
+            this.numRotate = new System.Windows.Forms.NumericUpDown();
+            this.cbxRotate = new System.Windows.Forms.ComboBox();
+            this.btnApply = new System.Windows.Forms.Button();
+            this.chkStartup = new System.Windows.Forms.CheckBox();
+            this.chkMinimized = new System.Windows.Forms.CheckBox();
             this.grpRescan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numRotate)).BeginInit();
             this.SuspendLayout();
             // 
             // cbxWallpaperStyle
@@ -61,7 +69,7 @@
             this.systray.BalloonTipText = "Wallpaper Changer";
             this.systray.BalloonTipTitle = "WC";
             this.systray.Icon = ((System.Drawing.Icon)(resources.GetObject("systray.Icon")));
-            this.systray.Text = "notifyIcon1";
+            this.systray.Text = "Wallpaper Changer";
             this.systray.Visible = true;
             this.systray.DoubleClick += new System.EventHandler(this.systray_DoubleClick);
             // 
@@ -77,7 +85,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(172, 162);
+            this.btnCancel.Location = new System.Drawing.Point(96, 263);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 2;
@@ -88,7 +96,7 @@
             // btnOk
             // 
             this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOk.Location = new System.Drawing.Point(91, 162);
+            this.btnOk.Location = new System.Drawing.Point(15, 263);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 3;
@@ -109,13 +117,13 @@
             // 
             // grpRescan
             // 
-            this.grpRescan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grpRescan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpRescan.Controls.Add(this.lblRescan);
             this.grpRescan.Controls.Add(this.btnRescan);
-            this.grpRescan.Location = new System.Drawing.Point(12, 39);
+            this.grpRescan.Location = new System.Drawing.Point(12, 149);
             this.grpRescan.Name = "grpRescan";
-            this.grpRescan.Size = new System.Drawing.Size(235, 94);
+            this.grpRescan.Size = new System.Drawing.Size(240, 94);
             this.grpRescan.TabIndex = 5;
             this.grpRescan.TabStop = false;
             this.grpRescan.Text = "Rescan";
@@ -124,18 +132,100 @@
             // 
             this.lblRescan.AutoSize = true;
             this.lblRescan.Location = new System.Drawing.Point(6, 16);
-            this.lblRescan.MaximumSize = new System.Drawing.Size(215, 0);
+            this.lblRescan.MaximumSize = new System.Drawing.Size(240, 0);
             this.lblRescan.Name = "lblRescan";
-            this.lblRescan.Size = new System.Drawing.Size(213, 39);
+            this.lblRescan.Size = new System.Drawing.Size(232, 39);
             this.lblRescan.TabIndex = 0;
             this.lblRescan.Text = "Scan the \"wallpapers\" folder for new files and subfolders if you have added new c" +
     "ontent after launching Wallpaper Changer.";
+            // 
+            // chkRotate
+            // 
+            this.chkRotate.AutoSize = true;
+            this.chkRotate.Location = new System.Drawing.Point(12, 39);
+            this.chkRotate.Name = "chkRotate";
+            this.chkRotate.Size = new System.Drawing.Size(114, 17);
+            this.chkRotate.TabIndex = 7;
+            this.chkRotate.Text = "Rotate Wallpapers";
+            this.chkRotate.UseVisualStyleBackColor = true;
+            // 
+            // lblRotate
+            // 
+            this.lblRotate.AutoSize = true;
+            this.lblRotate.Location = new System.Drawing.Point(18, 64);
+            this.lblRotate.Name = "lblRotate";
+            this.lblRotate.Size = new System.Drawing.Size(37, 13);
+            this.lblRotate.TabIndex = 8;
+            this.lblRotate.Text = "Every:";
+            // 
+            // numRotate
+            // 
+            this.numRotate.Location = new System.Drawing.Point(61, 62);
+            this.numRotate.Name = "numRotate";
+            this.numRotate.Size = new System.Drawing.Size(50, 20);
+            this.numRotate.TabIndex = 9;
+            this.numRotate.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            // 
+            // cbxRotate
+            // 
+            this.cbxRotate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxRotate.FormattingEnabled = true;
+            this.cbxRotate.Items.AddRange(new object[] {
+            "Hours",
+            "Minutes",
+            "Seconds"});
+            this.cbxRotate.Location = new System.Drawing.Point(117, 61);
+            this.cbxRotate.Name = "cbxRotate";
+            this.cbxRotate.Size = new System.Drawing.Size(103, 21);
+            this.cbxRotate.TabIndex = 10;
+            // 
+            // btnApply
+            // 
+            this.btnApply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnApply.Location = new System.Drawing.Point(177, 263);
+            this.btnApply.Name = "btnApply";
+            this.btnApply.Size = new System.Drawing.Size(75, 23);
+            this.btnApply.TabIndex = 11;
+            this.btnApply.Text = "Apply";
+            this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
+            // 
+            // chkStartup
+            // 
+            this.chkStartup.AutoSize = true;
+            this.chkStartup.Location = new System.Drawing.Point(12, 88);
+            this.chkStartup.Name = "chkStartup";
+            this.chkStartup.Size = new System.Drawing.Size(145, 17);
+            this.chkStartup.TabIndex = 13;
+            this.chkStartup.Text = "Run on Windows Startup";
+            this.chkStartup.UseVisualStyleBackColor = true;
+            // 
+            // chkMinimized
+            // 
+            this.chkMinimized.AutoSize = true;
+            this.chkMinimized.Location = new System.Drawing.Point(12, 111);
+            this.chkMinimized.Name = "chkMinimized";
+            this.chkMinimized.Size = new System.Drawing.Size(97, 17);
+            this.chkMinimized.TabIndex = 14;
+            this.chkMinimized.Text = "Start Minimized";
+            this.chkMinimized.UseVisualStyleBackColor = true;
             // 
             // Preferences
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(259, 197);
+            this.ClientSize = new System.Drawing.Size(264, 298);
+            this.Controls.Add(this.chkMinimized);
+            this.Controls.Add(this.chkStartup);
+            this.Controls.Add(this.btnApply);
+            this.Controls.Add(this.cbxRotate);
+            this.Controls.Add(this.numRotate);
+            this.Controls.Add(this.lblRotate);
+            this.Controls.Add(this.chkRotate);
             this.Controls.Add(this.grpRescan);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnCancel);
@@ -144,12 +234,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(265, 225);
+            this.MinimumSize = new System.Drawing.Size(270, 275);
             this.Name = "Preferences";
             this.Text = "Wallpaper Changer";
             this.Resize += new System.EventHandler(this.Preferences_Resize);
             this.grpRescan.ResumeLayout(false);
             this.grpRescan.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numRotate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,6 +256,13 @@
         private System.Windows.Forms.Button btnRescan;
         private System.Windows.Forms.GroupBox grpRescan;
         private System.Windows.Forms.Label lblRescan;
+        private System.Windows.Forms.CheckBox chkRotate;
+        private System.Windows.Forms.Label lblRotate;
+        private System.Windows.Forms.NumericUpDown numRotate;
+        private System.Windows.Forms.ComboBox cbxRotate;
+        private System.Windows.Forms.Button btnApply;
+        private System.Windows.Forms.CheckBox chkStartup;
+        private System.Windows.Forms.CheckBox chkMinimized;
 
 
 
